@@ -17,7 +17,7 @@ if (!file_exists($nombre_fichero)) {
 if (filesize($nombre_fichero) == 0){
   $vacio = false;
 }else{
-  $file = fopen($nombre_fichero, "r") or exit("Error abriendo fichero!");
+  $file = fopen($nombre_fichero, "r") || exit("Error abriendo fichero!");
   $linea = fgets($file);
   $terminal =  explode("_", $linea);
   $mid = trim($terminal[0]);
@@ -31,14 +31,9 @@ if (filesize($nombre_fichero) == 0){
 $merchantId=$mid;//Homologación 7100040113
 $terminalId=$tid;//BP para OTT
 
-/*
-$merchantId="5000004001";//SUPERMAXI
-$terminalId="L0100402";
 
-*/
 
-/*$merchantId="1000000505";
-$terminalId="PD100406";*/
+
 
 
 
@@ -48,15 +43,10 @@ $terminalId="PD100406";*/
 $_SESSION['merchterm'] = $merchterm;
 
 
-/*
-**Low Risk - DATAFAST*/
-/*if($modalidad=='1'){
-	$_SESSION['entityId'] = "8a8294185a65bf5e015a6c8b89a10d8d";
-	$_SESSION['autorizador'] =  "OGE4Mjk0MTg1YTY1YmY1ZTAxNWE2YzhiMmY2OTBkOGJ8UmtqcHlOTkU4cw==";
-}else{*/
+
 	$_SESSION['entityId'] = "8a8294175f113aad015f11652f2200a5";
 	$_SESSION['autorizador'] =  "OGE4Mjk0MTg1YTY1YmY1ZTAxNWE2YzhjNzI4YzBkOTV8YmZxR3F3UTMyWA==";
-//}
+}
 
 //$_SESSION['entityId']=$entity;
 //$_SESSION['autorizador']=$token;
@@ -152,7 +142,7 @@ $json = json_decode($responseData, true);
 
 ?>
 <!DOCTYPE html>
-<html>
+<html xml:lang>
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -169,7 +159,7 @@ $json = json_decode($responseData, true);
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<img src="../imagenes/logo-datafast.png">
+			<img src="../imagenes/logo-datafast.png" alt="logo">
 		</div>
 		<div class="col-md-12">
 		<h1>Portal de compras</h1>
