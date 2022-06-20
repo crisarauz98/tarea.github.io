@@ -264,7 +264,7 @@ function myTimer() {
           labels: {cvv: "CVV", cardHolder: "Nombre(Igual que en la tarjeta)", insertCode:"Ingrese el codigo"},
 		  brandDetectionPriority: ["ALIA", "VISA"],/*
 		  onDetectBrand: function(brands){
-				
+		//comentario		
       }
 </script>
 
